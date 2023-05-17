@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Card from "./Card";
-import { BsArrowDownCircle } from 'react-icons/bs'
+import { BsArrowDownCircle } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -48,7 +48,8 @@ export default function Home() {
         <div className="text-3xl text-white font-bold">Kaspad</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
           Kaspad is the node for the Kaspa network. With a running kaspad you
-          make the network more secure. You can also request all important data. Running a kaspad in a docker might always be a good idea.
+          make the network more secure. You can also request all important data.
+          Running a kaspad in a docker might always be a good idea.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa REST-API Server
@@ -58,15 +59,20 @@ export default function Home() {
           communicate to a configured Kaspa node with an REST-API interface.
           Check{" "}
           <a href="https://api.kaspa.org" target="_blank">
-            <span className="font-bold hover:text-teal-300">https://api.kaspa.org</span>
+            <span className="font-bold hover:text-teal-200">
+              https://api.kaspa.org
+            </span>
           </a>{" "}
           for reference. You can run your very own REST-API server if needed.
         </div>
-        <BsArrowDownCircle className="text-[4rem] mt-10"             onClick={() => {
-              document
-                .getElementById("body2")
-                .scrollIntoView({ behavior: "smooth" });
-            }}/>
+        <BsArrowDownCircle
+          className="text-[4rem] mt-10 hover:cursor-pointer hover:text-teal-200"
+          onClick={() => {
+            document
+              .getElementById("body2")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        />
       </div>
 
       <div
@@ -88,12 +94,14 @@ export default function Home() {
           Kaspa-DB.
         </div>
 
-        <BsArrowDownCircle className="text-[4rem] mt-10"       
-              onClick={() => {
-              document
-                .getElementById("bodyDl")
-                .scrollIntoView({ behavior: "smooth" });
-            }}/>
+        <BsArrowDownCircle
+          className="text-[4rem] mt-10 hover:cursor-pointer hover:text-teal-200"
+          onClick={() => {
+            document
+              .getElementById("bodyDl")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        />
       </div>
 
       <div
