@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  kaspa_rest_server:
+    image: supertypo/kaspa-rest-server:latest
+    restart: unless-stopped
+    environment:
+      KASPAD_HOST_1: kaspad:16110
+    ports:
+      - "8000:8000/tcp"
+    links:
+      - kaspad
+
+  kaspad:
+    image: supertypo/kaspad:latest
+    restart: unless-stopped
+    ports:
+      - "16110:16110/tcp" # RPC - consider removing
+      - "16111:16111/tcp"
+    volumes:
+      - kaspad:/app/data/
+
+volumes:
+  kaspad:

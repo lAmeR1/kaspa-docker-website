@@ -72,7 +72,7 @@ export default function Home() {
         className="flex flex-col justify-center items-center min-h-screen text-teal-300"
       >
         <div className="text-3xl text-white font-bold">Kaspa-DB</div>
-        <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
+        <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
           The Kaspa-DB is a PostgreSQL database which was created initially for the Kaspa Explorer. It saves all the block and transaction data.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">Kaspa-DB Filler</div>
@@ -93,16 +93,19 @@ export default function Home() {
         </div>
         <div className="flex flex-row flex-wrap justify-center items-center">
           <Card
+          fileName="kaspa-minimum.yaml"
             cardName="minimum"
             description="This is the lite version for docker compose."
           />
 
           <Card
+            fileName="kaspa-lite.yaml"
             cardName="lite"
             description="This is the lite version for docker compose."
           />
 
           <Card
+          fileName="kaspa-full.yaml"
             cardName="full"
             description="This is the lite version for docker compose."
           />

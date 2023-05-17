@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  kaspad:
+    image: supertypo/kaspad:latest
+    restart: unless-stopped
+    ports:
+      - "16110:16110/tcp" # RPC - consider removing
+      - "16111:16111/tcp"
+    volumes:
+      - kaspad:/app/data/
+volumes:
+  kaspad:
