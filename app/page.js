@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Card from "./Card";
 import { BsArrowDownCircle } from "react-icons/bs";
 
@@ -15,11 +14,12 @@ export default function Home() {
           Welcome to the Kaspa Docker Center
         </div>
         <div className="md:text-xl p-4">
+          Get your Kaspa node and ecosystem tools running on your own server.
           Download the docker-compose file which you need for your application.
         </div>
         <div className="flex flex-row justify-center">
           <button
-            className="border border-2 border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8"
+            className="border-2 border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8"
             onClick={() => {
               document
                 .getElementById("body1")
@@ -29,7 +29,7 @@ export default function Home() {
             Read more
           </button>
           <button
-            className="border border-2 border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8 ml-5"
+            className="border border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8 ml-5"
             onClick={() => {
               document
                 .getElementById("bodyDl")
@@ -46,18 +46,19 @@ export default function Home() {
         className="flex flex-col justify-center items-center min-h-screen text-teal-300"
       >
         <div className="text-3xl text-white font-bold">Kaspad</div>
-        <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
-          Kaspad is the node for the Kaspa network. With a running kaspad you
-          make the network more secure. You can also request all important data.
-          Running a kaspad in a docker might always be a good idea.
+        <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
+          Kaspad is the node for the Kaspa network. Make the network more secure
+          and get all important data you need. Running a kaspad in a docker is a
+          very good idea in general.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa REST-API Server
         </div>
-        <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
-          The Kaspa REST-API Server is an application which allows you to
-          communicate to a configured Kaspa node with an REST-API interface.
-          Check{" "}
+        <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
+          The <span className="text-teal-300">Kaspa REST-API Server</span> is an
+          application which allows you to communicate to a configured Kaspa node
+          via a HTTP interface. With this server you can use basically every
+          programming language to communicate to the Kaspa network. Check{" "}
           <a href="https://api.kaspa.org" target="_blank">
             <span className="font-bold hover:text-teal-200">
               https://api.kaspa.org
@@ -82,16 +83,20 @@ export default function Home() {
         <div className="text-3xl text-white font-bold">Kaspa-DB</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
           The Kaspa-DB is a PostgreSQL database which was created initially for
-          the Kaspa Explorer. It saves all the block and transaction data.
+          the Kaspa Explorer. It saves all the block and transaction data in the
+          DB. If you need to store blocks or transactions, or you want to create
+          some stats, the database is a good solution.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa-DB Filler
         </div>
-        <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
-          This is a tool, written in Python, which is used to fill the Kaspa-DB.
-          The Filler is communicating directly with the Kaspa node, requesting
-          block and transaction data and pushing the information into the
-          Kaspa-DB.
+        <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
+          This is a tool, written in Python, which is used to fill the above
+          mentioned Kaspa-DB. The <span className="text-teal-300">Kaspa-DB Filler</span> is
+          communicating directly with the Kaspa node, requesting block and
+          transaction data and pushing the information into the Kaspa-DB. This
+          tool also checks reorgs in the network and verifies if transactions
+          are accepted pr not.
         </div>
 
         <BsArrowDownCircle
