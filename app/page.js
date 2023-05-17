@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Card from "./Card";
+import { BsArrowDownCircle } from 'react-icons/bs'
 
 export default function Home() {
   return (
@@ -17,7 +18,14 @@ export default function Home() {
           Download the docker-compose file which you need for your application.
         </div>
         <div className="flex flex-row justify-center">
-          <button className="border border-2 border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8">
+          <button
+            className="border border-2 border-y-emerald-100 hover:bg-teal-400/40 px-5 py-3 mt-8"
+            onClick={() => {
+              document
+                .getElementById("body1")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Read more
           </button>
           <button
@@ -28,12 +36,10 @@ export default function Home() {
                 .scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Go to downloads
+            Downloads
           </button>
         </div>
       </div>
-
-      
 
       <div
         id="body1"
@@ -42,19 +48,7 @@ export default function Home() {
         <div className="text-3xl text-white font-bold">Kaspad</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
           Kaspad is the node for the Kaspa network. With a running kaspad you
-          make the network more secure. You can request all important data.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem,
-          officiis quis voluptas adipisci modi, voluptatum pariatur cupiditate
-          ipsum eos harum fugiat hic quibusdam fugit nisi. Molestiae dicta, sit
-          earum incidunt rerum dolorem, voluptatibus voluptates ad nemo cumque
-          vitae, cupiditate enim! Totam eos quas sapiente repudiandae nostrum
-          recusandae cupiditate, tempora quaerat maxime placeat sed omnis odit
-          quis velit quod laboriosam dignissimos consectetur iusto! Quos eaque
-          illo exercitationem, voluptas ipsum voluptates similique iusto facere
-          consequuntur in cumque consequatur, porro odit libero, neque alias
-          atque officiis commodi perferendis incidunt? Vero, ut quae. Similique
-          voluptatibus veniam magnam rem reiciendis ducimus aut corrupti. Quasi,
-          aliquid.
+          make the network more secure. You can also request all important data. Running a kaspad in a docker might always be a good idea.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa REST-API Server
@@ -62,9 +56,17 @@ export default function Home() {
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
           The Kaspa REST-API Server is an application which allows you to
           communicate to a configured Kaspa node with an REST-API interface.
-          Check <a href="https://api.kaspa.org" target="_blank">https://api.kaspa.org</a> for reference. You can run your very own REST-API server if
-          needed.
+          Check{" "}
+          <a href="https://api.kaspa.org" target="_blank">
+            <span className="font-bold hover:text-teal-300">https://api.kaspa.org</span>
+          </a>{" "}
+          for reference. You can run your very own REST-API server if needed.
         </div>
+        <BsArrowDownCircle className="text-[4rem] mt-10"             onClick={() => {
+              document
+                .getElementById("body2")
+                .scrollIntoView({ behavior: "smooth" });
+            }}/>
       </div>
 
       <div
@@ -73,12 +75,25 @@ export default function Home() {
       >
         <div className="text-3xl text-white font-bold">Kaspa-DB</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
-          The Kaspa-DB is a PostgreSQL database which was created initially for the Kaspa Explorer. It saves all the block and transaction data.
+          The Kaspa-DB is a PostgreSQL database which was created initially for
+          the Kaspa Explorer. It saves all the block and transaction data.
         </div>
-        <div className="text-3xl text-white font-bold mt-[4rem]">Kaspa-DB Filler</div>
+        <div className="text-3xl text-white font-bold mt-[4rem]">
+          Kaspa-DB Filler
+        </div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4">
-          This is a tool, written in Python, which is used to fill the Kaspa-DB. The Filler is communicating directly with the Kaspa node, requesting block and transaction data and pushing the information into the Kaspa-DB.
+          This is a tool, written in Python, which is used to fill the Kaspa-DB.
+          The Filler is communicating directly with the Kaspa node, requesting
+          block and transaction data and pushing the information into the
+          Kaspa-DB.
         </div>
+
+        <BsArrowDownCircle className="text-[4rem] mt-10"       
+              onClick={() => {
+              document
+                .getElementById("bodyDl")
+                .scrollIntoView({ behavior: "smooth" });
+            }}/>
       </div>
 
       <div
@@ -93,7 +108,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row flex-wrap justify-center items-center">
           <Card
-          fileName="kaspa-minimum.yaml"
+            fileName="kaspa-minimum.yaml"
             cardName="minimum"
             description="This is the lite version for docker compose."
           />
@@ -105,7 +120,7 @@ export default function Home() {
           />
 
           <Card
-          fileName="kaspa-full.yaml"
+            fileName="kaspa-full.yaml"
             cardName="full"
             description="This is the lite version for docker compose."
           />

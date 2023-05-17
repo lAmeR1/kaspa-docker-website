@@ -8,14 +8,16 @@ const Card = (props) => {
       </div>
       <div className="text-md pt-3">{props.description}</div>
 
-      <a href={props.fileName} download={props.fileName} target='_blank'>
-      <button
-        className="flex flex-row border-teal-300 border-2 p-3 justify-center items-center mx-5 rounded-md my-8 hover:bg-teal-300/20"
-        onClick={() => {}}
-      >
-        Download
-      </button>
-      </a>
+      <div className="flex flex-row justify-center items-center">
+        <a href={props.fileName} download={props.fileName} target="_blank">
+          <button
+            className="flex flex-row border-teal-300 border-2 p-3 justify-center items-center mx-5 rounded-md my-8 hover:bg-teal-300/20"
+            onClick={() => {}}
+          >
+            Download
+          </button>
+        </a>
+      </div>
 
       <div className="text-sm flex flex-row items-center border-t-2 border-t-teal-100/50 pt-3">
         <HiCheck className="w-5 h-5 mr-1 text-green-500" />
