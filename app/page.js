@@ -13,9 +13,12 @@ export default function Home() {
         <div className="text-3xl md:text-6xl font-bold p-8">
           Welcome to the Kaspa Docker Center
         </div>
-        <div className="md:text-xl p-4">
-          Get your Kaspa node and ecosystem tools running on your own server.
-          Download the docker-compose file which you need for your application.
+        <div className="md:text-xl p-4 md:w-3/4 xl:w-1/2">
+          Start your journey into the Kaspa ecosystem by setting up the Kaspa
+          node and accompanying tools on your server. To get started, choose
+          &apos;Download&apos; and find the appropriate docker-compose file
+          tailored to your application needs, or &apos;Read More&apos; for
+          further information.
         </div>
         <div className="flex flex-row justify-center">
           <button
@@ -43,28 +46,31 @@ export default function Home() {
 
       <div
         id="body1"
-        className="flex flex-col justify-center items-center min-h-screen text-teal-300"
+        className="flex flex-col justify-center items-center min-h-screen text-teal-300 py-10"
       >
         <div className="text-3xl text-white font-bold">Kaspad</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
-          Kaspad is the node for the Kaspa network. Make the network more secure
-          and get all important data you need. Running a kaspad in a docker is a
-          very good idea in general.
+          Kaspad operates as the primary node for the Kaspa network, ensuring
+          its security. By running a Kaspad in a docker, you not only bolster
+          the network&apos;s security but also gain access to crucial data.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa REST-API Server
         </div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
-          The <span className="text-teal-300">Kaspa REST-API Server</span> is an
-          application which allows you to communicate to a configured Kaspa node
-          via a HTTP interface. With this server you can use basically every
-          programming language to communicate to the Kaspa network. Check{" "}
-          <a href="https://api.kaspa.org" target="_blank">
-            <span className="font-bold hover:text-teal-200">
-              https://api.kaspa.org
-            </span>
+          The Kaspa REST-API Server is a converter to a Kaspa node, providing
+          communication through an HTTP interface. It&apos;s incredibly flexible
+          and compatible with nearly any programming language, making it easier
+          for you to interact with the Kaspa network. Please visit
+          <a
+            href="https://api.kaspa.org"
+            target="_blank"
+            className="text-teal-300 underline-offset-2"
+          >
+            https://api.kaspa.org
           </a>{" "}
-          for reference. You can run your very own REST-API server if needed.
+          for more details. With your own REST-API server you&apos;ll have
+          complete control over your interactions.
         </div>
         <BsArrowDownCircle
           className="text-[4rem] mt-10 hover:cursor-pointer hover:text-teal-200"
@@ -78,25 +84,26 @@ export default function Home() {
 
       <div
         id="body2"
-        className="flex flex-col justify-center items-center min-h-screen text-teal-300"
+        className="flex flex-col justify-center items-center min-h-screen text-teal-300 py-10"
       >
         <div className="text-3xl text-white font-bold">Kaspa-DB</div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
-          The Kaspa-DB is a PostgreSQL database which was created initially for
-          the Kaspa Explorer. It saves all the block and transaction data in the
-          DB. If you need to store blocks or transactions, or you want to create
-          some stats, the database is a good solution.
+          Kaspa-DB, initially crafted for the Kaspa Explorer, is a PostgreSQL
+          database that stores all block and transaction data. If you need to
+          securely store this type of data or wish to generate relevant
+          statistics, Kaspa-DB provides a beneficial and dependable solution. It
+          ensures the information you need is always at your fingertips.
         </div>
         <div className="text-3xl text-white font-bold mt-[4rem]">
           Kaspa-DB Filler
         </div>
         <div className="text-white px-3 md:px-12 py-4 md:w-3/4 xl:w-1/2">
-          This is a tool, written in Python, which is used to fill the above
-          mentioned Kaspa-DB. The <span className="text-teal-300">Kaspa-DB Filler</span> is
-          communicating directly with the Kaspa node, requesting block and
-          transaction data and pushing the information into the Kaspa-DB. This
-          tool also checks reorgs in the network and verifies if transactions
-          are accepted pr not.
+          The Kaspa-DB Filler is a Python tool that populates the Kaspa-DB. It
+          communicates directly with the Kaspa node, retrieves block, and
+          transaction data, and uploads this information into the database. In
+          addition to this, the tool also monitors any reorganizations within
+          the network and validates transaction acceptance information. This
+          ensures that your database stays accurate and up-to-date.
         </div>
 
         <BsArrowDownCircle
@@ -117,7 +124,7 @@ export default function Home() {
           Choose the docker compose version
         </div>
         <div className="text-xl p-4 text-white">
-          Download the docker-compose file which you need for your application.
+          Download the docker-compose file which fits to your application.
         </div>
         <div className="flex flex-row flex-wrap justify-center items-center">
           <Card
