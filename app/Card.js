@@ -8,7 +8,7 @@ const Card = (props) => {
       </div>
       <div className="text-md pt-3">{props.description}</div>
 
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center items-center mt-auto">
         <a href={props.fileName} download={props.fileName} target="_blank">
           <button
             className="flex flex-row border-teal-300 border-2 p-3 justify-center items-center mx-5 rounded-md my-8 hover:bg-teal-300/20"

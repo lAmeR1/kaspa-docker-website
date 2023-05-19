@@ -16,8 +16,8 @@ export default function Home() {
         <div className="md:text-xl p-4 md:w-3/4 xl:w-1/2">
           Start your journey into the Kaspa ecosystem by setting up the Kaspa
           node and accompanying tools on your server. To get started, choose
-          &apos;Download&apos; and find the appropriate docker-compose file
-          tailored to your application needs, or &apos;Read More&apos; for
+          &apos;Downloads&apos; and find the appropriate docker-compose file
+          tailored to your application needs, or &apos;Read more&apos; for
           further information.
         </div>
         <div className="flex flex-row justify-center">
@@ -61,13 +61,13 @@ export default function Home() {
           The Kaspa REST-API Server is a converter to a Kaspa node, providing
           communication through an HTTP interface. It&apos;s incredibly flexible
           and compatible with nearly any programming language, making it easier
-          for you to interact with the Kaspa network. Please visit
+          for you to interact with the Kaspa network. Please visit{" "}
           <a
             href="https://api.kaspa.org"
             target="_blank"
             className="text-teal-300 underline-offset-2"
           >
-            https://api.kaspa.org
+          https://api.kaspa.org
           </a>{" "}
           for more details. With your own REST-API server you&apos;ll have
           complete control over your interactions.
@@ -126,23 +126,23 @@ export default function Home() {
         <div className="text-xl p-4 text-white">
           Download the docker-compose file which fits to your application.
         </div>
-        <div className="flex flex-row flex-wrap justify-center items-center">
+        <div className="flex flex-row flex-wrap items-top">
           <Card
             fileName="kaspa-minimum.yaml"
             cardName="minimum"
-            description="This is the lite version for docker compose."
+            description="This is the minimum version which contains the Kaspa node only - ready to start."
           />
 
           <Card
             fileName="kaspa-lite.yaml"
             cardName="lite"
-            description="This is the lite version for docker compose."
+            description="This is the lite version which provides a REST-API server with the most important endpoints for the communication with the Kaspa node."
           />
 
           <Card
             fileName="kaspa-full.yaml"
             cardName="full"
-            description="This is the lite version for docker compose."
+            description="The full version is a docker compose file, which contains a REST-API server and a PostgreSQL DB for storing the blocks and transactions. The Kaspa-DB Filler adds blocks and transactions in real time into the database."
           />
         </div>
 
