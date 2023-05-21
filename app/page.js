@@ -121,10 +121,10 @@ export default function Home() {
         className="flex flex-col justify-center items-center min-h-screen text-teal-300"
       >
         <div className="text-5xl font-bold p-8 max-w-3xl text-teal-200">
-          Choose the docker compose version
+          Choose a docker-compose file
         </div>
         <div className="text-xl p-4 text-white">
-          Download the docker-compose file which fits to your application.
+          Download the docker-compose file which fits with your application.
         </div>
         <div className="flex flex-row flex-wrap items-top">
           <Card
