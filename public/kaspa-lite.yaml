@@ -6,6 +6,7 @@ services:
     restart: unless-stopped
     environment:
       KASPAD_HOST_1: kaspad:16110
+      VSPC_REQUEST: "false"
     ports:
       - "8000:8000/tcp"
     links:
@@ -15,7 +16,7 @@ services:
     image: supertypo/kaspad:latest
     restart: unless-stopped
     ports:
-      - "16110:16110/tcp" # RPC - consider removing
+      - "16110:16110/tcp"
       - "16111:16111/tcp"
     volumes:
       - kaspad:/app/data/

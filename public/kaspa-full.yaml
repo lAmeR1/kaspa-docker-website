@@ -7,20 +7,9 @@ services:
     environment:
       KASPAD_HOST_1: kaspad:16110
       SQL_URI: postgresql+asyncpg://postgres:mysecretpassword@kaspa_db:5432/postgres
+      VSPC_REQUEST: "false"
     ports:
       - "8000:8000/tcp"
-    links:
-      - kaspad
-      - kaspa_db
-
-  kaspa_socket_server:
-    image: lamer1/kaspa-socket-server:latest
-    restart: unless-stopped
-    environment:
-      KASPAD_HOST_1: kaspad:16110
-      SQL_URI: postgresql+asyncpg://postgres:mysecretpassword@kaspa_db:5432/postgres
-    ports:
-      - "8001:8000/tcp"
     links:
       - kaspad
       - kaspa_db
@@ -40,7 +29,7 @@ services:
     image: supertypo/kaspad:latest
     restart: unless-stopped
     ports:
-      - "16110:16110/tcp" # RPC - consider removing
+      - "16110:16110/tcp"
       - "16111:16111/tcp"
     volumes:
       - kaspad:/app/data/
