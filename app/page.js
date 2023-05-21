@@ -120,10 +120,10 @@ export default function Home() {
         id="bodyDl"
         className="flex flex-col justify-center items-center min-h-screen text-teal-300"
       >
-        <div className="text-5xl font-bold p-8 max-w-3xl text-teal-200">
+        <div className="text-3xl md:text-5xl font-bold p-8 text-teal-200">
           Choose a docker-compose file
         </div>
-        <div className="text-xl p-4 text-white">
+        <div className="md:text-xl p-4 text-white">
           Download the docker-compose file which fits with your application.
         </div>
         <div className="flex flex-row flex-wrap items-top">

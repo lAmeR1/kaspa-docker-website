@@ -3,15 +3,16 @@ import { HiCheck, HiX } from "react-icons/hi";
 const Card = (props) => {
   return (
     <div className="flex flex-col m-5 border-2 border-white rounded-lg p-5 w-64 text-white shadow-lg shadow-slate-100/20 hover:shadow-slate-100/30">
-      <div className="text-2xl border-b-2 border-b-teal-100/50 font-bold uppercase pb-3 text-teal-300 flex flex-row justify-center">
+      <div className="md:text-2xl border-b-2 border-b-teal-100/50 font-bold uppercase pb-3 text-teal-300 flex flex-row justify-center">
         {props.cardName}
       </div>
-      <div className="text-md pt-3">{props.description}</div>
+      <div className="text-sm md:text-base pt-3">{props.description}</div>
 
       <div className="flex flex-row justify-center items-center mt-auto">
-        <a href={props.fileName} download={props.fileName} target="_blank">
+        <a href={props.fileName} download={props.fileName} target="_blank"
+        className="mx-5 my-8">
           <button
-            className="flex flex-row border-teal-300 border-2 p-3 justify-center items-center mx-5 rounded-md my-8 hover:bg-teal-300/20"
+            className="flex flex-row border-teal-300 border-2 p-3 justify-center items-center rounded-md hover:bg-teal-300/20"
             onClick={() => {}}
           >
             Download
